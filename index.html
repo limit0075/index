@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/51c33efb84.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>포트폴리오</title>
+  </head>
+  <body>
+<!-- 탑 버튼 -->
+    <button id="fixedbtn" type="button" onclick="window.scrollTo(0,0);" class="btn btn-dark mb-5">▲ TOP</button>
+
+    <div class="container-sm mt-5">
+      <div class="row">
+        <div class="col-lg-3 mb-5 " >
+          <div class=" shadow rounded" style="background-color:white">
+            <div class="p-3" style="text-align:center;">
+              <div class="border-bottom">
+                <img class="mt-5 rounded-circle border mb-3"src="img/profile.jpg" alt="" style="width:100px; height: 100px;object-fit: cover;">
+                <h5><b>DaeSung</b></h5><br>
+                <p class="mb-5">항상 변수를 생각하며<br>
+                  배우는것을 즐거워 합니다.</p>
+              </div>
+
+            </div>
+
+            <div class="skill p-3" style="text-align:center;">
+              <div class="border-bottom">
+                <h5 class=""><b>Backend</b></h5>
+                <h6 class="mb-3">Python(Django)</h6>
+                <h5><b>DevOps</b></h5>
+                <h6 class="mb-3">Oracle / Maria</h6>
+                <h5><b>Frontend</b></h5>
+                <h6 class="mb-3">HTML5 / CSS / JS</h6>
+                <h5><b>About Tools</b></h5>
+                <h6 class="mb-5">Git / SourceTree</h6>
+              </div>
+            </div>
+            <div class="p-3" style="text-align:left">
+              <div class=" mt-3 mb-3">
+                <span class="half_highlight">&nbsp;Email&nbsp;</span> : limit0075@gmail.com<br>
+                <span class="half_highlight">&nbsp;Github&nbsp;</span> : <a href="https://github.com/limit0075" target="_blank" style="font-size: 15px;">https://github.com/limit0075</a><br>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-9">
+          <div class="row">
+            <!-- 수상 공모전  -->
+            <div class="col-lg-4 icon">
+              <div class="card shadow mb-5" style="margin:auto;">
+                <img src="img/contest.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">NET 챌린저 캠프(season5)</h5>
+                  <p class="card-text"><span style="color:silver;">은상 </span><br>프로젝트명 : Spatial Goniometry Cloud Platform
+                  <p></p>
+                  <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#modal1">
+                    Read more
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- 공모전2  -->
+            <div class="col-lg-4 icon">
+              <div class="card shadow mb-5" style="margin:auto;">
+                <div class="card-body">
+                  <h5 class="card-title">ICT 멘토링 한이음</h5>
+                  <p class="card-text"><span style="color:#498fee;"> </span>프로젝트명 : Ant Car  
+                  <p></p>
+                  <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#modal2">
+                    Read more
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- 자바 요리레시피 게시판 -->
+            <div class="col-lg-4 icon">
+              <div class="card shadow mb-5" style=" margin:auto;">
+                <img src="img/post1.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">요리레시피</h5>
+                  <p class="card-text"><span style="color:#498fee;">Skill: </span>Oracle DB, jsp, html, css, js
+                  <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#modal3">
+                    Read more
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- 파이썬 초인종  -->
+            <div class="col-lg-4 icon">
+              <div class="card shadow mb-5" style="margin:auto;">
+                <img src="img/bell1.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">방문자 자동 인식 초인종</h5>
+                  <p class="card-text"><span style="color:#498fee;">Skill: </span>Python(Django), MariaDB, openCV2 (face recognition) , html , css 
+                  <p></p>
+                  <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#modal4">
+                    Read more
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- 파이썬 캘린더  -->
+            <div class="col-lg-4 icon">
+              <div class="card shadow mb-5" style="margin:auto;">
+                <img src="img/calender.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">캘린더</h5>
+                  <p class="card-text"><div style="color:red;">현재 진행중인 프로젝트...</div><span style="color:#498fee;">Skill: </span>Python(Django, Summernote, Pyecharts, Folium, Numpy, Matplotlib, Pandas), html, js, css</p>
+                  <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#modal5">
+                    Read more
+                  </button>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+          <div class="footer mb-5 shadow" >
+            <div class="p-3" style="background-color:white; font-size:13px;">
+              © 2022 Choi DaeSung All Rights Reserved.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal1 -->
+    <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Spatial Goniometry Cloud Platform</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mt-3 mb-5 p-3 shadow">
+              <img src="img/contest.jpg" width="100%">
+            </div>
+            <div class="mb-3 p-3 shadow">
+              프로젝트 내용<br>
+              &#149; SG Cloud Platform을 활용하여 실내 공간을 파악하여 수집한 데이터를 오버레이한 후 지도의 형태로 표현 가능<br>
+              &#149; Base map, Space Resolution map, Object map 등과 같이 지도를 여러 레이어로 제작함으로써 사용자의 요구사항 및 환경에 적합한 지도를 생성해 제공할 수 있음<br>
+              &#149; SG Cloud S/W System을 활용해 생성된 실내 지도와 실외 지도 및 GPS의 연동 가능하므로 실외에서도 건물 내부의 특정 장소를 목적지로 설정할 수 있고, 실내 오브젝트의 실시간 정보를 받아 사용자에게 제공 가능<br>
+              &#149; 기존에 존재하는 실내 지도와 SG Cloud S/W System 내에 저장된 Object map data를 연동하여 실제 사용 중인 실내 공간을 유동적으로 인지 가능<br>
+              &#149; 실내 공간의 오브젝트를 인식해서 코드화 및 분류 하여 지도에 표현했기 때문에 사용자가 찾고자 하는 장소를 카테고리 별로 간편하게 탐색이 가능<br>
+              &#149; KOREN 환경 내 SG Cloud S/W System에서 사용자에게 지도를 전송할 때 수신 받는 디바이스 환경 및 사용자의 요구사항을 수집해서 맞춤형 품질 지도를 제공할 수 있음<br>
+              &#149; 별도의 프로그램의 설치가 필요하지 않고 웹 페이지를 통해 지도 측위 정보를 제공해 플랫폼의 제한이 없기 때문에 사용자의 접근이 용이함<br>
+              &#149; URL : <a href="https://www.etnews.com/20180823000142" target="_blank">https://www.etnews.com/20180823000142</a><br>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button style="margin:auto;" type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal2 -->
+    <div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Ant Car</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3 p-3 shadow">
+              프로젝트 내용<br>
+              &#149; Hands Free Auto Following 기능으로 ANT Car가 사용자를 인식하고 목적지로 설정하여 자동 주행<br>
+              &#149; 군집성 주행을 위해 여러 대의 ANT Car간에 통신을 하여 실시간 주행 환경 데이터를 공유<br>
+              &#149; Emergency Mode로 돌발 상황에 빠르게 대처할 수 있는 시스템을 위해 LIDAR 및 각종 센서와 Visioning Library를 활용<br>
+              &#149; 어플리케이션을 개발하여 사용자가 ANT Car의 시작/종료/긴급조종 모드를 사용할 수 있도록 도와줌<br>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button style="margin:auto;" type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal3 -->
+    <div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">요리 레시피 게시판</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mt-3 mb-5 p-3 shadow">
+              <video src="video/boardW.mp4" poster="" width="100%" controls autoplay muted loop>
+              </video>
+            </div>
+            <div class="mb-3 p-3 shadow">
+              &#149; 게시글 CRUD, 로그인, 회원가입, DB 연동, 페이징 처리, 검색<br>
+              &#149; 주요 기능 : 좋아요수가 많은 게시글을 인기 게시글로 사용자에게 보여줌
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button style="margin:auto;" type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal4 -->
+    <div class="modal fade" id="modal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">방문자 자동 인식 초인종</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mt-3 mb-5 p-3 shadow">
+              <video src="video/doorbell.mp4" poster="" width="100%" controls autoplay muted loop>
+              </video>
+            </div>
+            <div class="mb-3 p-3 shadow">
+              &#149; 게시글 CRUD, 로그인, DB 연동, 얼굴인식<br>
+              &#149; 주요 기능 : face recognition 이용하여 방문자 얼굴 인식하여 등록자인지 비등록자인지 확인
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button style="margin:auto;" type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal5 -->
+    <div class="modal fade" id="modal5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mt-3 mb-5 p-3 shadow">
+              <video src="video/calender.mp4" poster="" width="100%" controls autoplay muted loop>
+              </video>
+            </div>
+            <div class="mb-3 p-3 shadow">
+              &#149; 게시글 CRUD, 로그인, 회원가입, DB 연동 <br>
+              &#149; 프로젝트 방향성 : 사용자가 입력한 데이터를 모아서 그래프로 통계를 만들어 사용자에게 좀더 편한 시각화를 보여줌,메뉴바 밑에 todo-list,계산기 등등 다이어리에 부속적으로 필요한 기능을 넣을예정
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button style="margin:auto;" type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="js/bootstrap.min.js"></script>
+
+  </body>
+</html>
