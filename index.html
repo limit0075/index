@@ -75,82 +75,68 @@
     </div>
     <!-- END About Me 영역 -->
     <div class="mt-5" id="skill">
-      <h2><b>Job</b></h2>
+      <h2><b>Hobby</b></h2>
       <div class="mt-3 contents">
         <h5>
           <div>
-            <b><span class="half-highlight-yellow">Programer</span></b><br />
+            <!-- <b><span class="half-highlight-yellow">Programer</span></b><br /> -->
             <div class="row mt-3">
-              <div class="slideshow-container">
+              <div class="slider-container">
+                <div class="slides">
+                  <div class="slide"><img src="img/bell1.png" alt="Image 1"></div>
+                  <div class="slide"><img src="img/post1.png" alt="Image 2"></div>
+                  <div class="slide"><img src="img/profile.jpg" alt="Image 3"></div>
+                </div>
+                <button class="slider-button prev" onclick="prevSlide()">&#10094;</button>
+                <button class="slider-button next" onclick="nextSlide()">&#10095;</button>
+              </div>
 
-  <!-- 숫자와 캡션이 있는 이미지 -->
-  <div class="mySlides fade">
-    <div class="numbertext">1 / 3</div>
-    <img src="img/img.jpg" style="width:100%">
-    <div class="text">첫 번째 사진</div>
-  </div>
-
-  <div class="mySlides fade">
-    <div class="numbertext">2 / 3</div>
-    <img src="img/profile.jpg" style="width:100%">
-    <div class="text">두 번째 사진</div>
-  </div>
-
-  <div class="mySlides fade">
-    <div class="numbertext">3 / 3</div>
-    <img src="img/profile2.png" style="width:100%">
-    <div class="text">세 번째 사진</div>
-  </div>
-
-  <!-- 다음, 이전 이미지 버튼 -->
-  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1)">&#10095;</a>
-</div>
-<br>
+              <br>
 
 <!-- 현재 이미지를 알려주는 하단의 점 -->
-<div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span>
-  <span class="dot" onclick="currentSlide(2)"></span>
-  <span class="dot" onclick="currentSlide(3)"></span>
-</div>
-                  <!--controls-->
-                </div>
+              <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
               </div>
+                  <!--controls-->
             </div>
           </div>
         </h5>
       </div>
     </div>
+
+  </div>
+    <!-- </div> -->
     <script src="js/bootstrap.min.js"></script>
     <script>
-    var slideIndex = 1;
-showSlides(slideIndex);
+      let slideIndex = 0;
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+      function showSlides() {
+        const slides = document.querySelectorAll('.slide');
+        if (slideIndex >= slides.length) {
+          slideIndex = 0;
+        } else if (slideIndex < 0) {
+          slideIndex = slides.length - 1;
+        }
+        slides.forEach(slide => {
+          slide.style.display = 'none';
+        });
+        slides[slideIndex].style.display = 'block';
+      }
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
+      function prevSlide() {
+        slideIndex--;
+        showSlides();
+      }
 
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  // 수정: 선택된 슬라이드만 보이도록 변경
-  dots[slideIndex-1].className += " active";
-}
-</script>
+      function nextSlide() {
+        slideIndex++;
+        showSlides();
+      }
+
+      showSlides(); // 초기 슬라이드 표시
+    </script>
 
 </body>
 
