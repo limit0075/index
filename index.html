@@ -1,143 +1,707 @@
 <!DOCTYPE html>
-<html lang="ko" dir="ltr">
-
+<html lang="ko">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <script src="https://kit.fontawesome.com/51c33efb84.js" crossorigin="anonymous"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/style.css">
-  <title>포트폴리오</title>
-</head>
-<script>
-  window.onload = function () {
-    // URL의 앵커를 가져옵니다.
-    var hash = window.location.hash;
-    // 앵커가 존재하는 경우 해당 앵커로 자동으로 이동합니다.
-    if (hash) {
-      var element = document.querySelector(hash);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' }); // 스크롤 부드럽게 이동
-      }
-    }
-  };
-</script>
-
-<body>
-  <!-- 탑 버튼 -->
-  <button id="fixedbtn" type="button" onclick="window.scrollTo(0,0);" class="btn btn-dark mb-5">▲ TOP</button>
-
-  <!-- 사이드바 -->
-  <!-- <div id="fix-category">
-      <b>
-        <a href="#about" class="category-hover">◾ About Me<br/></a>
-        <a href="#skill" class="category-hover">◾ Job<br/></a>
-        <!-- <a href="#projects" class="category-hover">◾ Projects<br/></a>
-        <a href="#junior" class="category-hover sub-category">- 주니어 개발자<br/></a>
-        <a href="#job-seeker" class="category-hover sub-category">- 코딩의 시작<br/></a> -->
-  <!-- <a href="#certificate" class="category-hover">◾ Hobby<br/></a> -->
-  <!-- <a href="#timeline" class="category-hover">◾  Hobby<br/></a> -->
-  <!-- </b>
-    </div> -->
-
-  <div class="container-sm mt-5" style="max-width: 1050px">&nbsp;
-    <!-- 제목 -->
-    <div class="mt-3">
-      <h1 style="text-align: center; font-size: 3.8rem; "><b>{ Introduce }</b></h1>
-    </div>
-
-    <!-- About Me 영역 -->
-    <div class="mt-5" id="about">&nbsp;
-      <h2 class="mt-3"><b>About Me</b></h2>
-    </div>
-    <div class="row mt-4">
-      <div class="col-sm-4" style="display:flex; justify-content: center">
-        <img class="shadow icon profile-img" src="img/KakaoTalk_20240319_205601538_02.jpg" alt="프로필이미지">
-      </div>
-      <div class="col-sm-8">
-        <h4 class="mt-4 mb-4">
-          <!-- <span class="half-highlight-yellow"> -->
-          <b>
-            안녕하세요!
-            <br />명지대학교 <span class="half-highlight-yellow">부동산학과 24학번</span> 최대성 입니다.
-            <br /><br />
-        </h4>
-        <div class="p5"><span class="half-highlight-blue">Birth Date</span> : 1999.01.19</div>
-        <div class="p5"><span class="half-highlight-yellow">Mbti</span> : ENTJ</a></div>
-        <div class="p5"><span class="half-highlight-yellow">직장</span> : 프로그래머</a></div>
-        <!-- <div class="p5"><span class="half-highlight-yellow">Blog</span> : <a href="https://taeme.tistory.com"
-              target="_blank">https://taeme.tistory.com</a></div> -->
-      </div>
-    </div>
-    <!-- END About Me 영역 -->
-    <div class="mt-5" id="skill">
-      <h2><b>Hobby</b></h2>
-      <div class="mt-3 contents">
-        <h5>
-          <div>
-            <!-- <b><span class="half-highlight-yellow">Programer</span></b><br /> -->
-            <div class="row mt-3">
-              <div class="slider-container">
-                <div class="slides">
-                  <div class="slide"><img src="img/KakaoTalk_20240319_205601538_03.jpg" alt="Image 1"></div>
-                  <div class="slide"><img src="img/KakaoTalk_20240319_205717386_01.jpg" alt="Image 2"></div>
-                  <div class="slide"><img src="img/KakaoTalk_20240319_211020337.jpg" alt="Image 3"></div>
-                </div>
-                <button class="slider-button prev" onclick="prevSlide()">&#10094;</button>
-                <button class="slider-button next" onclick="nextSlide()">&#10095;</button>
-              </div>
-
-              <br>
-
-<!-- 현재 이미지를 알려주는 하단의 점 -->
-              <div style="text-align:center">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-              </div>
-                  <!--controls-->
-            </div>
-          </div>
-        </h5>
-      </div>
-    </div>
-
-  </div>
-    <!-- </div> -->
-    <script src="js/bootstrap.min.js"></script>
-    <script>
-      let slideIndex = 0;
-
-      function showSlides() {
-        const slides = document.querySelectorAll('.slide');
-        if (slideIndex >= slides.length) {
-          slideIndex = 0;
-        } else if (slideIndex < 0) {
-          slideIndex = slides.length - 1;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>최대성- RPA 개발자 포트폴리오</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        slides.forEach(slide => {
-          slide.style.display = 'none';
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 네비게이션 */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            color: #666;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #2563eb;
+        }
+
+        /* 히어로 섹션 */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            width: 100%;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero-text .subtitle {
+            font-size: 1.3rem;
+            color: #2563eb;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            color: #64748b;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .hero-image {
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 280px;
+            height: 280px;
+            border-radius: 20px;
+            background: linear-gradient(135deg, #2563eb, #3b82f6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 6rem;
+            color: white;
+            margin: 0 auto;
+            box-shadow: 0 20px 40px rgba(37, 99, 235, 0.2);
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+        }
+
+        .btn-secondary {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            border: 2px solid #2563eb;
+            color: #2563eb;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background: #2563eb;
+            color: white;
+        }
+
+        /* 섹션 공통 스타일 */
+        .section {
+            padding: 80px 0;
+        }
+
+        .section:nth-child(even) {
+            background: #f8fafc;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: #2563eb;
+            border-radius: 2px;
+        }
+
+        /* 소개 섹션 */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .about-stats {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .stat-item:last-child {
+            border-bottom: none;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #2563eb;
+        }
+
+        .stat-label {
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        .about-text h3 {
+            font-size: 1.8rem;
+            color: #1e293b;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-text p {
+            font-size: 1.1rem;
+            color: #64748b;
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        /* 스킬 섹션 */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-category {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            text-align: center;
+        }
+
+        .skill-category h4 {
+            color: #1e293b;
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+        }
+
+        .skill-tag {
+            background: #f1f5f9;
+            color: #475569;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border: 1px solid #e2e8f0;
+        }
+
+        /* 프로젝트 섹션 */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-image {
+            height: 200px;
+            background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: #64748b;
+            position: relative;
+        }
+
+        .project-info {
+            padding: 2rem;
+        }
+
+        .project-info h4 {
+            color: #1e293b;
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .project-info p {
+            color: #64748b;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .tech-tag {
+            background: #2563eb;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .project-link {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            padding: 0.5rem 0;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+
+        .project-link:hover {
+            border-color: #2563eb;
+        }
+
+        /* 연락처 섹션 */
+        .contact-container {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-intro {
+            font-size: 1.2rem;
+            color: #64748b;
+            margin-bottom: 3rem;
+            line-height: 1.6;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .contact-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-4px);
+        }
+
+        .contact-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-item h4 {
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-item p {
+            color: #2563eb;
+            font-weight: 600;
+        }
+
+        /* 푸터 */
+        .footer {
+            text-align: center;
+            padding: 2rem 0;
+            background: #1e293b;
+            color: #94a3b8;
+        }
+
+        /* 반응형 디자인 */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-info {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                justify-content: center;
+            }
+        }
+
+        /* 스크롤 애니메이션 */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- 네비게이션 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">최대성</a>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">홈</a></li>
+                <li><a href="#about" class="nav-link">소개</a></li>
+                <li><a href="#skills" class="nav-link">스킬</a></li>
+                <li><a href="#projects" class="nav-link">프로젝트</a></li>
+                <li><a href="#contact" class="nav-link">연락처</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 히어로 섹션 -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>안녕하세요,<br>최대성 입니다</h1>
+                    <div class="subtitle">RPA 개발자 · RPA developer</div>
+                    <p>사용자 중심의 웹 애플리케이션을 개발하며, 깔끔한 코드와 직관적인 UI/UX를 추구합니다. 
+                    3년간의 실무 경험을 바탕으로 다양한 프로젝트를 성공적으로 완수했습니다.</p>
+                    <div class="cta-buttons">
+                        <a href="#projects" class="btn-primary">프로젝트 보기</a>
+                        <a href="#contact" class="btn-secondary">연락하기</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="profile-img"><img src= "img\최대성.jpg"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 소개 섹션 -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title fade-in">About Me</h2>
+            <div class="about-content fade-in">
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">3+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">20+</div>
+                        <div class="stat-label">Projects Completed</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Client Satisfaction</div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h3>RPA 개발자로서의 여정</h3>
+                    <p>RPA(Robotic Process Automation)가 무엇인지 모르고 시작한지 3년간의 여정을 바탕으로 다양한 자동화 프로젝트를 통해 실무 경험을 쌓아왔습니다. 
+                        자사 솔루션 RPA 플랫폼을 활용해 효율적인 자동화 솔루션 개발 전문성을 가지고 있습니다.</p>
+                    <p>최적화된 워크플로우와 유지보수가 용이한 코드 작성을 지향합니다. 
+                        새로운 RPA 기술과 트렌드 학습에 적극적이며, 팀워크를 중요시하는 개발자입니다.</p>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 스킬 섹션 -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title fade-in">Technical Skills</h2>
+            <div class="skills-container fade-in">
+                <div class="skill-category">
+                    <h4>Frontend</h4>
+                    <div class="skill-list">
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Vue.js</span>
+                        <span class="skill-tag">TypeScript</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4>Backend</h4>
+                    <div class="skill-list">
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Express</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Django</span>
+                        <span class="skill-tag">REST API</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4>Database</h4>
+                    <div class="skill-list">
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">Redis</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4>Tools & Others</h4>
+                    <div class="skill-list">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Figma</span>
+                        <span class="skill-tag">Webpack</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 프로젝트 섹션 -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title fade-in">Featured Projects</h2>
+            <div class="projects-grid fade-in">
+                <div class="project-card">
+                    <div class="project-image">🛒</div>
+                    <div class="project-info">
+                        <h4>E-Commerce Platform</h4>
+                        <p>React와 Node.js로 구축한 풀스택 온라인 쇼핑몰. 상품 관리, 장바구니, 결제 시스템, 관리자 대시보드를 포함한 완전한 커머스 솔루션입니다.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Stripe</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">📱</div>
+                    <div class="project-info">
+                        <h4>Task Management App</h4>
+                        <p>팀 협업을 위한 프로젝트 관리 애플리케이션. 칸반 보드, 실시간 알림, 팀원 초대, 진행률 추적 등 업무 효율성을 높이는 다양한 기능을 제공합니다.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Vue.js</span>
+                            <span class="tech-tag">Express</span>
+                            <span class="tech-tag">Socket.io</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">📊</div>
+                    <div class="project-info">
+                        <h4>Analytics Dashboard</h4>
+                        <p>비즈니스 데이터를 시각화하는 분석 대시보드. 실시간 차트, 사용자 정의 리포트, 데이터 내보내기 기능으로 의사결정을 지원합니다.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">D3.js</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">FastAPI</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">🎵</div>
+                    <div class="project-info">
+                        <h4>Music Streaming App</h4>
+                        <p>Spotify API를 활용한 음악 스트리밍 웹 애플리케이션. 플레이리스트 생성, 음악 검색, 좋아요 기능, 개인화된 추천 시스템을 구현했습니다.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Spotify API</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 연락처 섹션 -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title fade-in">Get In Touch</h2>
+            <div class="contact-container fade-in">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <h4>Email</h4>
+                        <p>limit0075@gmail.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">🔗</div>
+                        <h4>LinkedIn</h4>
+                        <p>linkedin.com/in/kimdev</p>
+                    </div>
+                </div>
+                <a href="mailto:dev.kim@example.com" class="btn-primary">이메일 보내기</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 푸터 -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 김개발. All rights reserved. Made with ❤️</p>
+        </div>
+    </footer>
+
+    <script>
+        // 부드러운 스크롤
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
         });
-        slides[slideIndex].style.display = 'block';
-      }
 
-      function prevSlide() {
-        slideIndex--;
-        showSlides();
-      }
+        // 스크롤 애니메이션
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
 
-      function nextSlide() {
-        slideIndex++;
-        showSlides();
-      }
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
 
-      showSlides(); // 초기 슬라이드 표시
+        // 애니메이션 요소들 관찰 시작
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
     </script>
-
 </body>
-
 </html>
